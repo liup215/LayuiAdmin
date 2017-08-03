@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LarryCMS后台管理</title>
+	<meta name="renderer" content="webkit">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+	<meta name="apple-mobile-web-app-capable" content="yes">	
+	<meta name="format-detection" content="telephone=no">	
+	<!-- load css -->
+	<link rel="stylesheet" type="text/css" href="${ctxPath}/static/common/layui/css/layui.css" media="all">
+	<link rel="stylesheet" type="text/css" href="${ctxPath}/static/common/global.css" media="all">
+	<link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/adminstyle.css" media="all">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin" id="layui_layout">
+	<!-- 顶部区域 -->
+	@include("/common/_top.html"){}
+	<!-- 左侧侧边导航开始 -->
+	@include("/common/_left.html"){}
+
+	<!-- 左侧侧边导航结束 -->
+	<!-- 右侧主体内容 -->
+	@include("/common/_right.html"){}
+	<!-- 底部区域 -->
+	@include("/common/_footer.html"){}
+</div>
+<!-- 加载js文件-->
+	<script type="text/javascript" src="${ctxPath}/static/common/layui/layui.js"></script> 
+	<script type="text/javascript" src="${ctxPath}/static/js/larry.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/js/index.js"></script>
+<!-- 锁屏 -->
+<div class="lock-screen" style="display: none;">
+	<div id="locker" class="lock-wrapper">
+		<div id="time"></div>
+		<div class="lock-box center">
+			<img src="${ctxPath}/static/images/userimg.jpg" alt="">
+			<h1>admin</h1>
+			<duv class="form-group col-lg-12">
+				<input type="password" placeholder='锁屏状态，请输入密码解锁' id="lock_password" class="form-control lock-input" autofocus name="lock_password">
+				<button id="unlock" class="btn btn-lock">解锁</button>
+			</duv>
+		</div>
+	</div>
+</div>
+<!-- 菜单控件 -->
+<!-- <div class="larry-tab-menu">
+	<span class="layui-btn larry-test">刷新</span>
+</div> -->
+<!-- iframe框架刷新操作 -->
+<!-- <div id="refresh_iframe" class="layui-btn refresh_iframe">刷新</div> -->
+</body>
+</html>
